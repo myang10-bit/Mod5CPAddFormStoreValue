@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Test Page</title>
+<script>
+ function addRow() {
+   "use strict";
+
+    var table = document.getElementById("table");
+    var row= document.createElement("tr");
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    var td3 = document.createElement("td");
+	var td4 = document.createElement("td");
+    var td5 = document.createElement("td");
+
+    td1.innerHTML = document.getElementById("fname").value;
+    td2.innerHTML  = document.getElementById("lname").value;
+    td3.innerHTML  = document.getElementById("address").value;
+	td4.innerHTML  = document.getElementById("city").value;
+    td5.innerHTML  = document.getElementById("state").value;
+
+    row.appendChild(td1);
+    row.appendChild(td2);
+    row.appendChild(td3);
+    row.appendChild(td4);
+    row.appendChild(td5);
+
+    table.children[0].appendChild(row);
+}
+
+</script>
+
+First Name:
+<input type="text" name="fname" id="fname" /><br />
+Last Name
+<input type="text" name="lname" id="lname" /><br />
+Address:
+<input type="text" name="address" id="address" /><br /><br />
+City:
+<input type="text" name="city" id="city" /><br /><br />
+State:
+<input type="text" name="state" id="state" /><br /><br />
+<input type="button" value="Add Product +" onClick="addRow()" id="add"><br /><br />
+
+<table id="table" border="1">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Address</th>
+        <th>City</th>
+        <th>State</th>
+    </tr>
+</table>
+
+</body>
+</html>
